@@ -11,8 +11,9 @@ const notes=[
 ]
 
 app.post('/notes',async (req,res)=>{
+    //Destructure body
     const{title,description}=req.body
-
+   //Create note (DB)
 const note= await noteModel.create({
     title,description
 })
