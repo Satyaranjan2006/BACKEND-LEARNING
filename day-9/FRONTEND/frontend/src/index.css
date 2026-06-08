@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  background-color: #222222;
+  font-family: 'Poppins', sans-serif;
+}
+
+.notes{
+  display: flex;
+  
+  gap: 1rem;
+  padding-block:1rem;
+  padding-inline:3rem;
+  
+}
+
+.note {
+  background-color: #333333;
+  padding: 1rem;
+  width: 300px;
+  border-radius: 0.7rem;
+  max-width: 20rem;
+  color:rgb(255,253,249)
+
+  
+
+}
