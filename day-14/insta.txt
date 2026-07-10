@@ -1,0 +1,16 @@
+==>Authentication
+   ==> register
+   ==>login
+   ==>logout(token blacklisting)
+   ==>[OTP based registration]
+
+==> Post
+   ==>CREATE
+   ==>cen see the feed
+   ==>like posts(collections type)
+   ==>save posts
+
+==>users
+   ==>followers
+   ==>following
+   
