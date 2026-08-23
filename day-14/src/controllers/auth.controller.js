@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken')
 
 
 //register
+
 async function registerController(req, res)  {
     //using destructure
     console.log("Register API hit");
@@ -100,6 +101,7 @@ async function loginControl(req, res) {
    const token=jwt.sign(
     {
         id: user._id,
+        username:user.username
 
     },process.env.JWT_SECRET,{expiresIn:"1d"})
 
