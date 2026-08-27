@@ -1,10 +1,13 @@
+import { RouterProvider } from "react-router"
+import './style.scss'
 
+import AppRoutes from "./AppRoutes";
 
 function App() {
  
 
   return (
-   <></>
+   <AppRoutes/>
   )
 }
 
