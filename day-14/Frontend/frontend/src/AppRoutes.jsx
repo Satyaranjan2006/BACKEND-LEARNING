@@ -19,6 +19,7 @@ import Login from './features/auth/pages/Login'
 import Register from './features/auth/pages/Register'
 import {BrowserRouter,Route,Routes} from 'react-router'
 import React from 'react'
+import Welcome from './features/auth/pages/Welcome'
 
 const AppRoutes = () => {
   return (
@@ -26,6 +27,7 @@ const AppRoutes = () => {
     <Routes>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/'  element={<Welcome/>}/>
     </Routes>
     </BrowserRouter>
   )

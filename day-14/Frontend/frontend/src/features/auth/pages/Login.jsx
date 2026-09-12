@@ -1,8 +1,9 @@
 import React from 'react'
 import '../style/form.scss'
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import { useState } from 'react'
 import axios from 'axios'
+
 
 import { useAuth } from '../hook/useAuth'
 
@@ -11,7 +12,15 @@ const Login = () => {
     const [password, setPassword] = useState('')
 
     //----DBT--------------HOW WE GET HANDLE LOGIN FROM  useAuth()------------------
-    const { handleLogin } = useAuth()
+    const { handleLogin, loading } = useAuth()
+
+    const navigate = useNavigate()
+
+    if (loading) {
+        return (
+            <h1>Loading...</h1>
+        )
+    }
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -31,6 +40,7 @@ const Login = () => {
         handleLogin(username, password)
             .then(res => {
                 console.log(res);
+                navigate('/')
 
             })
 

@@ -13,6 +13,7 @@ export async function register(username,email,password){
             email,
             password
         })
+        return response.data
     } catch (error) {
         throw error
     }
@@ -25,6 +26,7 @@ export async function login(username,password){
             password
 
          })
+         return response.data
     } catch (error) {
         throw error
     }
