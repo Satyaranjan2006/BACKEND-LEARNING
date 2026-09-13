@@ -1,0 +1,48 @@
+.feed-page{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+
+    .feed{
+        max-width: 300px;
+        width: 100%;
+
+        .posts{
+            width: 100%;
+        }
+        .post{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            background-color: rgb(109, 85, 85);
+            
+            
+
+            .user{
+                display: flex;
+                align-items: center;
+                gap: 7px;
+
+                .img-wrapper{
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 2px solid rgba(255,0,0,0);
+                    background:conic-gradient(rgb(255, 0, 183),rgb(54, 8, 83),rgb(255, 0, 183)) border-box ;
+                }
+                img{
+                    width: 2rem;
+                    border-radius: 50%;
+
+                }
+            }
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

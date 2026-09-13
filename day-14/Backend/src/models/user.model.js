@@ -14,6 +14,8 @@ const userSchema=new mongoose.Schema({
     password:{
         type:String,
         required:[true,'password is required'],
+        //it is used to hide password from fronted in default.
+        select:false
     },
     bio:String,
     profileImage:{

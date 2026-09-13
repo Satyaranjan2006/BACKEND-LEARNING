@@ -12,6 +12,7 @@ export function AuthProvider({children}) {
         try {
             const response=await login(username,password)
             setUser(response.user)
+            // return response
         } catch (error) {
             console.log(error);
             

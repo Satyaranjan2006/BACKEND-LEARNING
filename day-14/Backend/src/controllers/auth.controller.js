@@ -42,7 +42,7 @@ async function registerController(req, res)  {
     )
     res.cookie('token', token)
 
-    res.status(201).json({
+     return res.status(201).json({
         //we do not  send password in to client.while providing success message
         message: 'user register sucessfully',
         user: {
@@ -80,8 +80,7 @@ async function loginControl(req, res) {
                 email: email
             }
         ]
-    })
-
+    }).select('+password')
     if (!user) {
         return res.status(404).json({
             message: 'Invalid User'
@@ -124,7 +123,7 @@ async function getMeController(req,res){
     const user=await userModel.findById(userId)
 
 
-    res.status(200).json({
+    return res.status(200).json({
         user:{
             username:user.username,
             email:user.email,
