@@ -2,6 +2,7 @@
 const jwt = require('jsonwebtoken')
 const userModel = require('../models/user.model');
 const blackListModel = require('../models/blacklist.model');
+const redis=require('../config/cache.js')
 
 async function authUser(req, res, next) {
     const token = req.cookies.token;
@@ -14,9 +15,7 @@ async function authUser(req, res, next) {
 
     //tohandle blacklisted token use ,so here we usethe concept of check where the token will be checked in blacklisted model.
 
-    const isTokenBlackListed=await blackListModel.findOne({
-        token
-    })
+    const isTokenBlackListed=await redis.get(token)
 
     if(isTokenBlackListed){
         return res.status(401).json({
